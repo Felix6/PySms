@@ -24,3 +24,4 @@ server.login( '<email>', '<password>' )
 
 # follow comments above for choosing  target number
 server.sendmail( 'foo@bar.com', '<target number>', message)
+ 
