@@ -31,6 +31,9 @@ for i,x in enumerate(gatewayServers, start=1):
 gateway = raw_input("\nChoose gateway: ")
 message = raw_input("Please enter message: ")
 number = raw_input("Enter target phone number: ")
+timesToSend = raw_input("Quantity of text messages: ")
+email = raw_input("Please enter G-Mail addres: ")
+password = raw_input("Please enter password: ")
 
 if gateway == str(1):
     targetNum = number + gatewayServers['AT&T']
@@ -56,6 +59,9 @@ server = smtplib.SMTP( "smtp.gmail.com", 587)
 server.starttls()
 
 # Replace <email> and <password> with valid credentials (without <>)
-server.login( '<email>', '<password>' )
-server.sendmail( 'foo@bar.com', targetNum, message)
+server.login( email, password )
+
+for i in range(int(timesToSend)):
+    server.sendmail( 'foo@bar.com', targetNum, message)
+
 print "\nMessage Sent"
