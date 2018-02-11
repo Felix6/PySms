@@ -1,8 +1,19 @@
 import smtplib
 from collections import OrderedDict
 
-
-print "---PySms---"
+print '''
+/$$$$$$$             /$$$$$$
+| $$__  $$           /$$__  $$
+| $$  \ $$ /$$   /$$| $$  \__/ /$$$$$$/$$$$   /$$$$$$$
+| $$$$$$$/| $$  | $$|  $$$$$$ | $$_  $$_  $$ /$$_____/
+| $$____/ | $$  | $$ \____  $$| $$ \ $$ \ $$|  $$$$$$
+| $$      | $$  | $$ /$$  \ $$| $$ | $$ | $$ \____  $$
+| $$      |  $$$$$$$|  $$$$$$/| $$ | $$ | $$ /$$$$$$$/
+|__/       \____  $$ \______/ |__/ |__/ |__/|_______/
+           /$$  | $$
+          |  $$$$$$/
+           \______/
+        '''
 
 print "Choose carrier\n"
 
@@ -47,4 +58,4 @@ server.starttls()
 # Replace <email> and <password> with valid credentials (without <>)
 server.login( '<email>', '<password>' )
 server.sendmail( 'foo@bar.com', targetNum, message)
-print "Message Sent"
+print "\nMessage Sent"
