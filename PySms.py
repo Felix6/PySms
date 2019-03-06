@@ -65,3 +65,6 @@ for i in range(int(timesToSend)):
     server.sendmail( 'foo@bar.com', targetNum, message)
 
 print "\nMessage Sent"
+
+# TODO:
+# USE ARGSPARSE TO MODIFY USAGE
